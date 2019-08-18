@@ -6,5 +6,6 @@ RUN apt-get -qq -y update && \
 
 WORKDIR /src
 ADD . .
+RUN chmod +x ./service.sh
 RUN ./service.sh dev_build
 CMD ["/src/service.sh", "dev_run", "data/example"]
