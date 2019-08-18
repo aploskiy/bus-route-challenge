@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # This script will run under bus_route_challenge folder irrespective of where it was invoked from
-cd $(data/example $0)
+#cd $(data/example $0)
 
 dev_build() {
   mvn package
@@ -9,7 +9,7 @@ dev_build() {
 
 dev_run() {
   # Do what you need to run your app in the foreground
-  java -jar target/bus-0.0.1-SNAPSHOT.jar.original $0
+  java -jar target/bus-0.0.1-SNAPSHOT.jar data/example
   sleep 600
 }
 
